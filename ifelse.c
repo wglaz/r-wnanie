@@ -1,5 +1,8 @@
 #include <stdio.h>
 #define _USE_MATH_DEFINES
+
+void wczytanie_danych(double *a, double *b, double *c);
+
 #include <math.h>
 
 int main() {
@@ -10,12 +13,7 @@ int main() {
     double x2;
     double delta;
 
-    printf("Podaj a: ");
-    scanf("%lf", &a);
-    printf("Podaj b: ");
-    scanf("%lf", &b);
-    printf("Podaj c: ");
-    scanf("%lf", &c);
+    wczytanie_danych(&a, &b, &c);
 
     //D = b 2 - 4 * a* c
 
@@ -37,4 +35,13 @@ int main() {
         printf("Rozwiązanie x1=%lf, x2=%lf\n", x1, x2);
     }
     return 0;
+}
+
+void wczytanie_danych(double *a, double *b, double *c) {
+    printf("Podaj a: ");
+    scanf("%lf", a);
+    printf("Podaj b: ");
+    scanf("%lf", b);
+    printf("Podaj c: ");
+    scanf("%lf", c);
 }
